@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    25% {opacity: 0.25;}
+    50% {opacity: 0.50;}
+    75% {opacity: 0.75;}
+    100% {opacity: 1;}
+  }
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-25px); }
+    50%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    display: block;
+    height: 30vh;
+}
+
+.bg-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/portfolio-hero-image.jpg");
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+}
+
+#header-default {
+    position: relative !important;
+}
+
+.container {
+    padding: 0 30px;
+    text-align: center;
+    width: 100%;
+}
+
+#header .container {
+    padding-bottom: 20px;
+}
+
+.nav-container {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.description {
+    color: white;
+    float: left;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+}
+
+.info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.name {
+    margin: 0;
+}
+
+.title {
+    margin: 0;
+}
+
+.checkpoints {
+    float: right;
+}
+
+/* .nav-container {
+    width: 950px;
+    margin: 0 auto
+} */
+
+.nav-bar {
+    position: relative;
+    z-index: 3;
+    color: white;
+}
+
+.mobile-hide {
+    display: none;
+}
+
+.nav-bar ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* .nav-bar ul li {
+    display: inline-block;
+} */
+
+.hero {
+    text-align: center;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto; */
+    color: white;
+    padding: 60px 0 130px;
+    height: 70vh;
+}
+
+.hero-container {
+    padding: 0 30px;
+    margin: 0 auto;
+    animation: fade-in 1s ease-in;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 1.8em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+.discover-container {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discover {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    margin: 0 auto 0 auto;
+    position: absolute;
+    bottom: 5px;
+}
+
+.learn-more {
+    margin-bottom: 10px;
+}
+
+/* .about {
+
+} */
+
+.row-1 {
+    height: 100vh;
+    padding-top: 0;
+    text-align: center;
+    background: #66ff33;
+}
+
+.personal-photo {
+    height: 100px;
+    width: 100px;
+}
