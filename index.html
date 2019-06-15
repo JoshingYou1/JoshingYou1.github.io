@@ -4,10 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="apple-mobile-web-app-title" content="Joshua Drumm | Fullstack Developer">
+        <meta name="application-name" content="Joshua Drumm | Fullstack Developer">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <title>Document</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <title>Joshua Drumm | Fullstack Developer</title>
     </head>
     <body>
         <header role="banner" class="header">
@@ -22,16 +31,25 @@
                         </div>
                     </div>
                     <div class="checkpoints">
-                        <nav class="nav-bar" role="navigation">
-                            <div class="desktop-hide">
-                                <input type="checkbox" />
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <ul class="menu">
-                                    <li>About</li>
-                                    <li>Projects</li>
-                                    <li>Contact</li>
+                        <nav class="nav-bar" role="navigation" id="nav-bar">
+                            <div class="desktop-hide" id="desktop-hide">
+                                <input class="nav-input" id="nav-input" type="checkbox" />
+                                <span class="hamburger-span"></span>
+                                <span class="hamburger-span"></span>
+                                <span class="hamburger-span"></span>
+                                <ul class="menu" id="menu">
+                                    <li class="nav-li" data-block="about">About</li>
+                                    <li class="nav-li" data-block="projects">Projects</li>
+                                    <li class="nav-li" data-block="contact">Contact</li>
+                                    <li class="nav-li-2">
+                                        <a href="https://github.com/JoshingYou1"><img class="nav-github-mark" src="images/github-mark.png"></a>
+                                    </li>
+                                    <li class="nav-li-2">
+                                        <a href="https://linkedin.com/in/joshing-you"><img class="nav-linkedin" src="images/in.png"></a>
+                                    </li>
+                                    <li class="nav-li-2">
+                                        <a href="mailto:joshing_you1@yahoo.com"><img class="nav-email" src="images/email-icon.png"></a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="mobile-hide">
@@ -58,7 +76,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="about">
                 <div class="row-1">
                     <div class="container">
                         <img class="personal-photo" src="images/personal-photo.jpg" alt="personal photo">
@@ -78,7 +96,7 @@
                     </div>
                 </div>
             </section>
-            <section class="projects">
+            <section class="projects" id="projects">
                 <div class="row-2">
                     <div class="container">
                         <div class="portfolio-piece">
@@ -181,11 +199,11 @@
                     </div>
                 </div>
             </section>
-            <section class="contact">
+            <section class="contact" id="contact">
                 <div class="row-1">
                     <div class="container a">
                         <p class="contact-p">
-                            If you have any questions regarding me or my work, please feel free to reach out to me. I would be happy to chat.
+                            If you have any questions regarding me or my work, please feel free to reach out to me. I would be happy to chat!
                         </p>
                         <a class="contact-me" href="mailto:joshing_you1@yahoo.com">CONTACT ME</a>
                         <ul class="contact-technologies">
@@ -197,5 +215,6 @@
             </section>
         </main>
         <footer role="content-info">&copy; 2019 Joshua Drumm</footer>
+        <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
