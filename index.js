@@ -1,37 +1,55 @@
 'use strict';
 
-// window.onload = handleClickLink;
+// -- Scroll to top link --
+if ($('#back-to-top').length) {
+    let scrollTrigger = 300, 
 
-// function scrollToAbout() {
-//     let aboutSection = document.getElementsByClassName('about');
-//     document.getElementsByClassName('about-li').onclick = function() {
-//         aboutSection.scrollIntoView({behavior: 'smooth'});
-//     }
-// }
+    backToTop = function () {
+        let scrollTop = $(window).scrollTop();
+        if (scrollTop > scrollTrigger) {
+            $('#back-to-top').addClass('show');
+            $('#back-to-top').removeClass('hide');
+        } else {
+            $('#back-to-top').removeClass('show');
+            $('#back-to-top').addClass('hide');
+        }
+    };
+    
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
 
-let nav = document.querySelector('.nav-input');
+
+// -- Mobile navigation window --
+let mobileNav = document.querySelector('.nav-input');
 
 function openNav() {
-    nav.classList.add('is-active');
+    mobileNav.classList.add('is-active');
     document.getElementById('menu').style.display = 'block';
 }
 
 function closeNav() {
-    nav.classList.remove('is-active');
-    // document.getElementById('menu').style.display = 'none';
+    mobileNav.classList.remove('is-active');
     document.getElementById('nav-input').checked = false;
-    // document.getElementById('menu').style.transform = 'translate(100%, 0%)';
 }
 
 
 function handleClickLink(event) {
     const block = event.target.dataset.block;
     document.getElementById(block).scrollIntoView({ behavior: 'smooth'});
-    nav.classList.contains('is-active') ? closeNav() : openNav();
+    mobileNav.classList.contains('is-active') ? closeNav() : openNav();
 }
   
 document.querySelectorAll('.nav-li').forEach((link) => {
     link.addEventListener('click', handleClickLink);
 });
 
-nav.addEventListener('click', () => nav.classList.contains('is-active') ? closeNav() : openNav());
+mobileNav.addEventListener('click', () => nav.classList.contains('is-active') ? closeNav() : openNav());

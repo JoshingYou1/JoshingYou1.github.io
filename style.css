@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Vollkorn', serif;
 }
 
 @keyframes fade-in {
@@ -12,14 +13,14 @@
 
 @keyframes bounce {
     0%   { transform: translateY(0); }
-    30%  { transform: translateY(-15px); }
+    30%  { transform: translateY(-20px); }
     50%  { transform: translateY(0); }
     100% { transform: translateY(0); }
 }
 
 html, body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
 }
   
@@ -121,24 +122,8 @@ header {
     display: none;
 }
 
-/* .nav-bar ul {
-    margin: 0;
-    padding: 0;
-} */
-
-/* .nav-bar ul li {
-    display: inline-block;
-} */
-
 .hero {
     text-align: center;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    margin-left: auto;
-    margin-right: auto; */
     color: white;
     padding: 60px 0 130px;
     height: 70vh;
@@ -182,10 +167,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* .about {
-
-} */
-
 .row-1 {
     height: 100%;
     padding-top: 0;
@@ -205,6 +186,10 @@ header {
     width: 100px;
     border-radius: 50%;
     margin-top: 50px;
+}
+
+.about-p, .contact-p {
+    font-size: 16px;
 }
 
 li {
@@ -233,15 +218,12 @@ li {
   
   cursor: pointer;
   
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0; 
+  z-index: 2; 
   
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 .desktop-hide span
 {
   display: block;
@@ -272,38 +254,23 @@ li {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-.desktop-hide input:checked ~ span
-{
+.desktop-hide input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: black;
 }
 
-/*
- * But let's hide the middle one.
- */
-.desktop-hide input:checked ~ span:nth-last-child(3)
-{
+
+.desktop-hide input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-.desktop-hide input:checked ~ span:nth-last-child(2)
-{
+
+.desktop-hide input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 .menu {
     position: absolute;
     width: 270px;
@@ -331,31 +298,9 @@ li {
     display: inline-block;
 }
 
-/* .menu li { */
-    /* width: 100px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 15px 0;
-    font-size: 22px; */
-    /* text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s; */
-/* } */
-
-/*
- * And let's slide it in from the left
- */
-.desktop-hide input:checked ~ ul
-{
+.desktop-hide input:checked ~ ul {
   transform: none;
 }
-
-/* .menu li:hover, .menu li:focus {
-    background-size: 100% 3px;
-} */
 
 .technologies {
     padding: 0;
@@ -410,7 +355,7 @@ li {
 
 .contact-technologies {
     padding: 0;
-    margin-top: 30px;
+    margin: 30px 0 0 0;
 }
 
 .contact-technologies li {
@@ -459,8 +404,16 @@ footer {
 .portfolio-piece {
     padding: 45px 0px 60px;
     display: block;
-    border-bottom: 1px solid #cccccc;
-    
+    border-bottom: 1px solid #cccccc;  
+}
+
+.portfolio-piece-title {
+    font-size: 25px;
+}
+
+.portfolio-piece-description {
+    font-size: 16px;
+    color: #868686;
 }
 
 .portfolio-piece:last-child {
@@ -470,7 +423,7 @@ footer {
 .portfolio-col img {
     height: 130px;
     width: 260px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 .nav-github-mark, .nav-linkedin, .nav-email {
@@ -487,6 +440,239 @@ footer {
     cursor: pointer;
 }
 
-@media (min-width: 1072px) {
+@media only screen and (min-width: 520px) {
+    .row-1, .row-2 {
+        padding: 0 30px;
+    }
+}
 
+@media only screen and (min-width: 620px) {
+    .row-1, .row-2 {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .discover-container {
+        width: 400px;
+    }
+
+    .learn-more {
+        font-size: 18px;
+    }
+
+    .desktop-hide {
+        display: none;
+    }
+
+    .mobile-hide {
+        display: block;
+    }
+
+    .checkpoints {
+        margin-top: 0;
+    }
+
+    .nav-bar {
+        display: inline-block;
+    }
+
+    .nav-li {
+        font-size: 18px;
+        display: table-cell; 
+        position: relative;
+    }
+
+    .nav-li:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: -4px;
+        content: "";
+        display: block;
+        height: 3px;
+        border-radius: 2px;
+        left: 50%;
+        position: absolute;
+        background: #66ff33;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      .nav-li:hover:after { 
+        width: 100%; 
+        left: 0;
+        bottom: -4px;
+      }
+
+    .mobile-hide ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-hide ul li {
+        display: inline-block;
+        color: white;
+    }
+
+    .nav-li {
+        width: unset;
+        margin-right: unset;
+        margin-left: unset;
+        font-size: 16px;
+        padding: 0 32px 0;
+    }
+
+    html, body {
+        overflow-x: unset;
+    }
+
+
+    #back-to-top {
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        z-index: 9999;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        line-height: 30px;
+        background: none;
+        color: black;
+        cursor: pointer;
+        border: 0;
+        border-radius: 2px;
+        text-decoration: none;
+        transition: opacity 0.2s ease-out;
+        transition: bottom 0.2s ease;
+        opacity: 0;
+    }
+
+    #back-to-top:hover {
+        bottom: 45px;
+    }
+
+    #back-to-top.show {
+        opacity: 1;
+    }
+
+    #back-to-top.hide {
+        display: none;
+    }
+
+    .portfolio-piece {
+        padding: 45px 40px 45px;  
+    }
+
+    .portfolio-piece-title {
+        font-size: 38px;
+        font-weight: 800;
+    }
+
+    .portfolio-piece-description {
+        font-size: 17px;
+    }
+
+    .portfolio-col img {
+        height: 300px;
+        width: 540px;
+    }
+
+    .about-h2 {
+        font-size: 30px;
+    }
+
+    .about-p, .contact-p, footer {
+        font-size: 20px;
+    }
+
+    .row-1 {
+        padding: 20px 40px; 
+    }
+
+    .technologies {
+        margin: 20px 0 50px 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .name {
+        font-size: 20px;
+    }
+    
+    .title {
+        font-size: 11px;
+    }
+
+    .hero-title {
+        font-size: 52px;
+    }
+
+    .discover-container {
+        width: 500px;
+    }
+
+    .learn-more {
+        font-size: 26px;
+    }
+
+    .row-1 {
+        padding: 60px 40px;
+    }
+
+    .row-2 {
+        padding: 0;
+    }
+
+    .portfolio-piece {
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+
+    .portfolio-col img {
+        height: 250px;
+        width: 430px;
+        float: left;
+    }
+
+    .portfolio-piece-description {
+        font-size: 16px;
+    }
+
+    .description-container {
+        width: 51%;
+        display: inline-block;
+        height: 300px;
+    }
+
+    .portfolio-piece-title {
+        margin-top: 0;
+    }
+
+    .nav-li {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1075px;
+    }
+
+    .portfolio-col img {
+        height: 270px;
+        width: 455px
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .container {
+        width: 1100px;
+    }
+
+    .portfolio-col img {
+        height: 280px;
+        width: 470px;
+    }
 }
