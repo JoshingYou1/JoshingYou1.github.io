@@ -107,11 +107,6 @@ header {
     margin-top: 8px;
 }
 
-/* .nav-container {
-    width: 950px;
-    margin: 0 auto
-} */
-
 .nav-bar {
     position: relative;
     z-index: 3;
@@ -156,6 +151,7 @@ header {
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .discover {
@@ -182,8 +178,8 @@ header {
 }
 
 .personal-photo {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     margin-top: 50px;
 }
@@ -383,11 +379,6 @@ footer {
     text-align: center;
 }
 
-
-.link-container h2 {
-    text-decoration: underline;
-}
-
 .link-container a {
     height: 50px;
     width: 50px;
@@ -449,6 +440,11 @@ footer {
 @media only screen and (min-width: 620px) {
     .row-1, .row-2 {
         padding: 0 50px;
+    }
+    
+    .personal-photo {
+        height: 200px;
+        width: 200px;
     }
 }
 

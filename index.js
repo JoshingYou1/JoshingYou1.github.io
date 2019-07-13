@@ -44,12 +44,18 @@ function closeNav() {
 
 function handleClickLink(event) {
     const block = event.target.dataset.block;
+    console.log(block);
     document.getElementById(block).scrollIntoView({ behavior: 'smooth'});
     mobileNav.classList.contains('is-active') ? closeNav() : openNav();
 }
-  
-document.querySelectorAll('.nav-li').forEach((link) => {
-    link.addEventListener('click', handleClickLink);
+
+document.querySelectorAll('.nav-li').forEach((elem) => {
+    elem.addEventListener('click', handleClickLink);
 });
 
-mobileNav.addEventListener('click', () => nav.classList.contains('is-active') ? closeNav() : openNav());
+mobileNav.addEventListener('click', () => mobileNav.classList.contains('is-active') ? closeNav() : openNav());
+
+// -- Scroll to about section after clicking bounce element --
+$('#discover-container').on('click', function() {
+    document.getElementById('about').scrollIntoView({behavior: 'smooth'});
+});
